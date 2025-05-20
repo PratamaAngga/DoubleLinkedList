@@ -32,13 +32,13 @@ public class DLLMain {
                     break;
                     
                 
-                // case 3:
-                //     list.removeFirst();
-                //     break;
+                case 3:
+                    list.removeFirst();
+                    break;
                 
-                // case 4:
-                //     list.removeLast();
-                //     break;
+                case 4:
+                    list.removeLast();
+                    break;
                 
                 case 5:
                     list.print();

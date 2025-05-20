@@ -77,4 +77,42 @@ public class DoubleLinkedList20 {
             current = current.next;
         }
     }
+
+    public void removeFirst() {
+        if (isEmpty()) {
+            System.out.println("List kosong, tidak ada yang bisa dihapus.");
+        } else {
+            Node20 removedNode = head;
+            if (head == tail) {
+                head = tail = null;
+            } else {
+                head = head.next;
+                if (head != null) {
+                    head.prev = null;
+                }
+            }
+            System.out.print("Data sudah berhasil dihapus. Data yang terhapus adalah: ");
+            removedNode.data.tampil();
+        }
+    }
+
+    public void removeLast() {
+        if (isEmpty()) {
+            System.out.println("List kosong, tidak ada yang bisa dihapus.");
+        } else {
+            Node20 removedNode = tail;
+
+            if (head == tail) {
+                head = tail = null;
+            } else {
+                tail = tail.prev;
+                if (tail != null) {
+                    tail.next = null;
+                }
+            }
+
+            System.out.print("Data sudah berhasil dihapus. Data yang terhapus adalah: ");
+            removedNode.data.tampil();
+        }
+    }
 }
